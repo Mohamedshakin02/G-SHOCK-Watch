@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Tiny5&display=swap');
+
+$inter-font: "Inter", sans-serif;
+$Permanent-font: "Permanent Marker", serif;
+$red: #cc2229;
+
+body {
+    background-color: #F8F8FF;
+    margin: auto;
+    font-family: $inter-font;
+}
+
+header {
+    display: flex;
+    width: 100%;
+
+    nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    img {
+        height: 100px;
+        width: auto;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        display: flex;
+        padding: 0%;
+    }
+
+    .Menus{
+        width: 50%;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+main {
+    .intro{
+        width: 75%;
+        justify-self: center;
+        align-self: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'image detail';
+        margin-bottom: 100px;
+
+        p{
+            padding: 0%;
+            margin: 15px;
+        }
+
+        .watch-detail{
+            padding-right: 30px;
+            .collab {
+                font-size: 22px;
+                font-weight: 500;
+                color: #393E46
+            }
+
+            .watch-title{
+                font-size: 52px;
+                font-weight: 600;
+            }
+            .watch-desc{
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+
+        button {
+            margin-left: 15px;
+            margin-top: 15px;
+            padding: 15px 25px 15px 25px;
+            border-radius: 0%;
+            border: 0px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: white;
+                color: black;
+                border: 3px solid $red;
+                transition: 2s;
+            }
+
+            &:not(:hover){
+                transition: 2s;
+            }
+        }
+
+        .Cart{
+            margin-left: auto;
+            background-color: $red;
+        }
+    }
+
+    .watch-img{
+        grid-area: image;
+    }
+
+    .watch-detail {
+        grid-area: detail;
+        align-self: center;
+    }
+
+    .about{
+        display: flex;
+        height: auto;
+        background-image: url("/images/G-shock logo.png");
+        background-size:200px;
+        background-repeat: repeat;
+        background-position-x: center;
+
+        p{
+            display: flex;
+            align-items: center;
+            margin: 0px;
+            padding: 0px 100px 0px 100px;
+            font-family: $Permanent-font;
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            justify-self: center;
+            width: 100%;
+            background-color: rgba(248, 248, 255, 0.9);
+        }
+
+        img{
+            object-fit: contain;
+            background-color: rgba(248, 248, 255, 0.9);
+            height: 400px;
+            width: auto;
+        }
+    }
+
+    .feature-section{
+        padding: 100px;
+
+        .feature-intro{
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .features-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "feature-1 feature-2 feature-3"
+            "feature-4 feature-5 feature-6";
+            gap: 50px;
+            justify-self: center;
+            text-align: center;
+
+            .feature{
+                background-color: $red;
+                color: black;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 24px;
+                font-weight: 600;
+                height: 260px;
+                width: 260px;
+            }
+
+            p{
+                margin: 0%;
+            }
+
+            .feature img{
+                height: 200px;
+                width: 200px;
+                object-fit: contain;
+            }
+
+            .feature-1{
+                grid-area: feature-1;
+            }
+
+            .feature-2{
+                grid-area: feature-2;
+            }
+
+            .feature-3{
+                grid-area: feature-3;
+            }
+
+            .feature-4{
+                grid-area: feature-4;
+            }
+
+            .feature-5{
+                grid-area: feature-5;
+            }
+
+            .feature-6{
+                grid-area: feature-6;
+            }
+        }
+    }
+}

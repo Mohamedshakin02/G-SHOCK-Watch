@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tiny5&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Tiny5&display=swap");
+body {
+  background-color: #F8F8FF;
+  margin: auto;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  display: flex;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+header img {
+  height: 100px;
+  width: auto;
+}
+header li {
+  list-style: none;
+}
+header ul {
+  display: flex;
+  padding: 0%;
+}
+header .Menus {
+  width: 50%;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+main .intro {
+  width: 75%;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "image detail";
+  margin-bottom: 100px;
+}
+main .intro p {
+  padding: 0%;
+  margin: 15px;
+}
+main .intro .watch-detail {
+  padding-right: 30px;
+}
+main .intro .watch-detail .collab {
+  font-size: 22px;
+  font-weight: 500;
+  color: #393E46;
+}
+main .intro .watch-detail .watch-title {
+  font-size: 52px;
+  font-weight: 600;
+}
+main .intro .watch-detail .watch-desc {
+  font-size: 22px;
+  font-weight: 500;
+}
+main .intro button {
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 15px 25px 15px 25px;
+  border-radius: 0%;
+  border: 0px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+main .intro button:hover {
+  background-color: white;
+  color: black;
+  border: 3px solid #cc2229;
+  transition: 2s;
+}
+main .intro button:not(:hover) {
+  transition: 2s;
+}
+main .intro .Cart {
+  margin-left: auto;
+  background-color: #cc2229;
+}
+main .watch-img {
+  grid-area: image;
+}
+main .watch-detail {
+  grid-area: detail;
+  align-self: center;
+}
+main .about {
+  display: flex;
+  height: auto;
+  background-image: url("/images/G-shock logo.png");
+  background-size: 200px;
+  background-repeat: repeat;
+  background-position-x: center;
+}
+main .about p {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px 100px 0px 100px;
+  font-family: "Permanent Marker", serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  justify-self: center;
+  width: 100%;
+  background-color: rgba(248, 248, 255, 0.9);
+}
+main .about img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: rgba(248, 248, 255, 0.9);
+  height: 400px;
+  width: auto;
+}
+main .feature-section {
+  padding: 100px;
+}
+main .feature-section .feature-intro {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main .feature-section .features-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "feature-1 feature-2 feature-3" "feature-4 feature-5 feature-6";
+  gap: 50px;
+  justify-self: center;
+  text-align: center;
+}
+main .feature-section .features-container .feature {
+  background-color: #cc2229;
+  color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  height: 260px;
+  width: 260px;
+}
+main .feature-section .features-container p {
+  margin: 0%;
+}
+main .feature-section .features-container .feature img {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .feature-section .features-container .feature-1 {
+  grid-area: feature-1;
+}
+main .feature-section .features-container .feature-2 {
+  grid-area: feature-2;
+}
+main .feature-section .features-container .feature-3 {
+  grid-area: feature-3;
+}
+main .feature-section .features-container .feature-4 {
+  grid-area: feature-4;
+}
+main .feature-section .features-container .feature-5 {
+  grid-area: feature-5;
+}
+main .feature-section .features-container .feature-6 {
+  grid-area: feature-6;
+}/*# sourceMappingURL=style.css.map */
