@@ -9,16 +9,16 @@ body {
 header {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 header nav {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
   align-items: center;
 }
 header img {
   height: 100px;
   width: auto;
+  margin-left: 30px;
 }
 header li {
   list-style: none;
@@ -26,16 +26,50 @@ header li {
 header ul {
   display: flex;
   padding: 0%;
+  align-items: center;
 }
 header .Menus {
   width: 50%;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
+  margin-right: 30px;
+}
+header .Menus li {
+  padding-right: 50px;
+}
+header .Menus .buttons li {
+  padding-right: 0%;
 }
 header a {
   text-decoration: none;
   color: black;
+}
+header .button {
+  font-size: 22px;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 0px;
+  width: 100px;
+  border: 0px;
+  cursor: pointer;
+}
+header .button-1 {
+  background-color: black;
+  color: white;
+}
+header .button-2 {
+  background-color: #cc2229;
+  color: white;
+}
+header .button:hover {
+  background-color: white;
+  color: black;
+  border: 3px solid #cc2229;
+  transition: 2s;
+}
+header .button:not(:hover) {
+  transition: 2s;
 }
 
 main .intro {
@@ -47,11 +81,16 @@ main .intro {
   grid-template-areas: "image detail";
   margin-bottom: 100px;
 }
+main .intro img {
+  max-width: 100%;
+  height: auto;
+}
 main .intro p {
   padding: 0%;
   margin: 15px;
 }
 main .intro .watch-detail {
+  box-sizing: border-box;
   padding-right: 30px;
 }
 main .intro .watch-detail .collab {
@@ -70,6 +109,7 @@ main .intro .watch-detail .watch-desc {
 main .intro button {
   margin-left: 15px;
   margin-top: 15px;
+  box-sizing: border-box;
   padding: 15px 25px 15px 25px;
   border-radius: 0%;
   border: 0px;
@@ -110,9 +150,10 @@ main .about p {
   display: flex;
   align-items: center;
   margin: 0px;
+  box-sizing: border-box;
   padding: 0px 100px 0px 100px;
   font-family: "Permanent Marker", serif;
-  font-size: 32px;
+  font-size: 2.177vw;
   font-weight: 600;
   text-align: center;
   justify-self: center;
@@ -123,13 +164,14 @@ main .about img {
   -o-object-fit: contain;
      object-fit: contain;
   background-color: rgba(248, 248, 255, 0.9);
-  height: 400px;
+  max-height: 400px;
   width: auto;
 }
 main .feature-section {
-  padding: 100px;
+  box-sizing: border-box;
+  padding: 50px;
 }
-main .feature-section .feature-intro {
+main .feature-section .feature-heading {
   font-size: 22px;
   text-align: center;
   margin-bottom: 50px;
@@ -180,4 +222,165 @@ main .feature-section .features-container .feature-5 {
 }
 main .feature-section .features-container .feature-6 {
   grid-area: feature-6;
+}
+main .collection-heading {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main .swiper {
+  width: 70%;
+  height: 100%;
+}
+main .swiper-slide {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .swiper-slide img {
+  display: block;
+  width: 250px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+main .swiper-button-prev, main .swiper-button-next {
+  color: #cc2229;
+}
+main .swiper-pagination-bullet-active {
+  background-color: #cc2229;
+}
+main .swiper-button-prev:after, main .swiper-button-next:after {
+  padding-bottom: 100px;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: black;
+  box-sizing: border-box;
+  padding: 50px 50px 50px 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer img {
+  max-height: 200px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer h1, footer p, footer ul, footer li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+footer li {
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+footer li:hover {
+  color: #cc2229;
+}
+footer .links h1 {
+  font-weight: 500;
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+footer .News h1 {
+  font-weight: 500;
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+footer .News p {
+  font-size: 16px;
+  width: 80%;
+  padding: 10px 0px 10px 0px;
+}
+footer .News label {
+  display: flex;
+  border-bottom: 2px solid white;
+  width: 80%;
+  justify-content: space-between;
+}
+footer .News label button {
+  background-color: black;
+  border: 0px;
+}
+footer .News label img {
+  max-width: 25px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 2px solid white;
+  align-self: center;
+  cursor: pointer;
+}
+footer .News label img:hover {
+  filter: invert(100);
+  border: 2px solid black;
+}
+footer .News input {
+  width: 100%;
+  padding: 5px 0px 5px 0px;
+  background-color: black;
+  border: 0;
+  color: white;
+  padding: 10px 0px;
+}
+footer .News input:focus {
+  outline: none;
+}
+footer .News input::-moz-placeholder {
+  color: white;
+  padding-bottom: 10px;
+}
+footer .News input::placeholder {
+  color: white;
+  padding-bottom: 10px;
+}
+footer .social-media {
+  margin-top: 5px;
+}
+footer .social-media ul {
+  display: flex;
+}
+footer .social-media ul li {
+  padding: 0px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 50%;
+  max-height: 25px;
+  max-width: 25px;
+  padding: 10px;
+}
+footer .social-media ul li:hover {
+  background-color: #cc2229;
+}
+footer .social-media img {
+  max-height: 100%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: invert(100);
+}
+
+.copyright {
+  background-color: black;
+  color: white;
+}
+.copyright p {
+  margin: 0%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
