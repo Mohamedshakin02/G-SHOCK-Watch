@@ -2,7 +2,7 @@ function Features() {
     return (
         <>
             <div className="feature-section">
-                <div className="feature-intro">
+                <div className="feature-heading">
                     <h1>Discover What Makes It Unique</h1>
                 </div>
 
