@@ -5,7 +5,13 @@ const userModel = require("./models/userModel")
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["http://deploy-mern-1whq.vercel.app"],
+        methods:["POST","GET"],
+        credentials: true
+    }
+))
 
 mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
@@ -29,7 +35,7 @@ app.post("/login", (req, res) =>{
 
 app.post('/register', (req, res)=> {
     userModel.create(req.body)
-    .then(employees => res.json(employees))
+    .then(user => res.json(user))
     .catch(err => res.json(err))
 })
 
