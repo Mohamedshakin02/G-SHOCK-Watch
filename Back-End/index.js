@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors(
     {
-        origin: ["https://g-shock-watch-frontend.vercel.app"],
+        origin: ["https://g-shock.vercel.app/"],
         methods:["POST","GET"],
         credentials: true
     }
