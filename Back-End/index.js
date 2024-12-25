@@ -5,14 +5,20 @@ const userModel = require("./models/userModel")
 
 const app = express()
 
-app.use(cors(
-    {
-        origin: "https://g-shock.vercel.app",
-        methods:["POST","GET", 'PUT', 'DELETE', 'OPTIONS'],
-        allowedHeaders: ['Content-Type', 'Authorization'],
-        credentials: true
-    }
-))
+// app.use(cors(
+//     {
+//         origin: ["https://g-shock.vercel.app"],
+//         methods:["POST","GET"],
+//         credentials: true
+//     }
+// ))
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://g-shock.vercel.app'); // Frontend URL
+    res.header('Access-Control-Allow-Credentials', 'true');            // Allow cookies
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE'); // Allowed HTTP methods
+    res.header('Access-Control-Allow-Headers', 'Content-Type');        // Allowed headers
+    next();
+});
 
 app.use(express.json())
 
