@@ -8,6 +8,9 @@ function Signup() {
     const [password, setPassword] = useState()
     const navigate = useNavigate()
 
+    axios.defaults.withCredentials=true
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('https://g-shock-backend.vercel.app/register', {email, password})
