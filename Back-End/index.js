@@ -24,7 +24,7 @@ app.use(express.json())
 
 mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
-app.post("https://g-shock-backend.vercel.app/login", (req, res) =>{
+app.post("/login", (req, res) =>{
     const {email, password} = req.body;
     userModel.findOne({email: email})
     .then (user => {
@@ -42,7 +42,7 @@ app.post("https://g-shock-backend.vercel.app/login", (req, res) =>{
     })
 })
 
-app.post('https://g-shock-backend.vercel.app/register', (req, res)=> {
+app.post('/register', (req, res)=> {
     userModel.create(req.body)
     .then(user => res.json(user))
     .catch(err => res.json(err))
