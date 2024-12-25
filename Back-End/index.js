@@ -4,7 +4,7 @@ const cors = require("cors")
 const userModel = require("./models/userModel")
 
 const app = express()
-app.use(express.json())
+
 app.use(cors(
     {
         origin: ["https://g-shock.vercel.app"],
@@ -13,6 +13,8 @@ app.use(cors(
         credentials: true
     }
 ))
+
+app.use(express.json())
 
 mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
