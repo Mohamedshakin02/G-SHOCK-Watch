@@ -23,7 +23,7 @@ function Footer() {
                     <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
                     <form action="">
                         <label htmlFor=""><input type="text" placeholder="Enter your email" />
-                            <button>
+                            <button onClick={(e)=>e.preventDefault()}>
                                 <img src="/images/email logo.jpg" alt="" />
                             </button>
                         </label>
