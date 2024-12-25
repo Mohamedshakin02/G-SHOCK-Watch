@@ -10,7 +10,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('g-shock-watch.vercel.app/register', {email, password})
+        axios.post('https://g-shock-backend.vercel.app/register', {email, password})
         .then(result => {console.log(result);
         alert("Account successfully created!, Please login !");
         navigate('/login');

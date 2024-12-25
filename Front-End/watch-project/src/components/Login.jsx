@@ -9,7 +9,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('g-shock-watch.vercel.app/login', {email, password})
+        axios.post('https://g-shock-backend.vercel.app/login', {email, password})
         .then(result => {
             console.log(result)
             if (result.data.message === "Success") {
