@@ -8,7 +8,8 @@ app.use(express.json())
 app.use(cors(
     {
         origin: ["https://g-shock.vercel.app"],
-        methods:["POST","GET"],
+        methods:["POST","GET", 'PUT', 'DELETE', 'OPTIONS'],
+        allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true
     }
 ))
