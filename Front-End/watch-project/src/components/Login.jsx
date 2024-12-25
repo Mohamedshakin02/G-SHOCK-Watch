@@ -25,7 +25,7 @@ function Login() {
     }
 
     return (
-        <>
+        <main>
             <div className="login-bg">
                 <div className="login-bg-2">
                     <div className="login-box">
@@ -48,7 +48,7 @@ function Login() {
                     </div>
                 </div>
             </div>
-        </>
+        </main>
     );
 }
 

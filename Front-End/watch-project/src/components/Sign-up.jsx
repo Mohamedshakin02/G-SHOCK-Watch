@@ -20,7 +20,7 @@ function Signup() {
     }
 
     return (
-        <>
+        <main>
             <div className="signup-bg">
                 <div className="signup-bg-2">
                     <div className="signup-box">
@@ -44,7 +44,7 @@ function Signup() {
                     </div>
                 </div>
             </div>
-        </>
+        </main>
     );
 }
 
