@@ -2,13 +2,12 @@ import { useState } from "react";
 import axios from 'axios';
 import  { useNavigate } from "react-router-dom";
 
+axios.defaults.withCredentials=true
 
 function Signup() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
-
-    axios.defaults.withCredentials=true
 
 
     const handleSubmit = (e) => {
