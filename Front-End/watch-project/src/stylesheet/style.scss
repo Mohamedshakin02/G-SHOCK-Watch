@@ -11,6 +11,11 @@ body {
     font-family: $inter-font;
 }
 
+::selection {
+    background-color: $red;
+    color: #F8F8FF;
+}
+
 header {
     display: flex;
     width: 100%;

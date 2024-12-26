@@ -6,6 +6,16 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+::-moz-selection {
+  background-color: #cc2229;
+  color: #F8F8FF;
+}
+
+::selection {
+  background-color: #cc2229;
+  color: #F8F8FF;
+}
+
 header {
   display: flex;
   width: 100%;
