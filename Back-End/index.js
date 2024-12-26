@@ -7,7 +7,7 @@ const app = express()
 
 app.use(cors(
     {
-        origin: ["https://g-shock.vercel.app"],
+        origin: ["https://g-shock-backend.vercel.app"],
         methods:["POST","GET"],
         credentials: true
     }
@@ -42,7 +42,7 @@ app.post("/login", (req, res) =>{
     })
 })
 
-app.post('https://g-shock-backend.vercel.app/register', (req, res)=> {
+app.post('/register', (req, res)=> {
     userModel.create(req.body)
     .then(user => res.json(user))
     .catch(err => res.json(err))
