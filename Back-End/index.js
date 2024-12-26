@@ -42,7 +42,7 @@ app.post("/login", (req, res) =>{
     })
 })
 
-app.post('/register', (req, res)=> {
+app.post('https://g-shock-backend.vercel.app/register', (req, res)=> {
     userModel.create(req.body)
     .then(user => res.json(user))
     .catch(err => res.json(err))
