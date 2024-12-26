@@ -1,26 +1,19 @@
 import { useState } from "react";
 import axios from 'axios';
 import  { useNavigate } from "react-router-dom";
-
-axios.defaults.withCredentials=true
-
 function Signup() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
-
-
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('/register', {email, password})
+        axios.post('http://localhost:4000/register', {email, password})
         .then(result => {console.log(result);
         alert("Account successfully created!, Please login !");
         navigate('/login');
-
     })
         .catch(err => console.log(err))
     }
-
     return (
         <main>
             <div className="signup-bg">
@@ -33,7 +26,6 @@ function Signup() {
                             required  
                             onChange={(e) => setEmail (e.target.value)}
                             /></label>
-
                             <label><input 
                             type="password" 
                             placeholder="Enter your password" 
@@ -49,5 +41,4 @@ function Signup() {
         </main>
     );
 }
-
 export default Signup; 

@@ -1,17 +1,13 @@
 import { useState } from "react";
 import axios from 'axios';
 import  { useNavigate } from "react-router-dom";
-
-axios.defaults.withCredentials=true
-
 function Login() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
-
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('/login', {email, password})
+        axios.post('http://localhost:4000/login', {email, password})
         .then(result => {
             console.log(result)
             if (result.data.message === "Success") {
@@ -25,7 +21,6 @@ function Login() {
     })
         .catch(err => console.log(err))
     }
-
     return (
         <main>
             <div className="login-bg">
@@ -38,13 +33,11 @@ function Login() {
                             required
                             onChange={(e) => setEmail (e.target.value)} />
                             </label>
-
                             <label><input type="password"
                              placeholder="Enter your password" 
                              required 
                              onChange={(e) => setPassword (e.target.value)}/>
                              </label>
-
                             <button type="submit">Login</button>
                         </form>
                     </div>
@@ -53,5 +46,4 @@ function Login() {
         </main>
     );
 }
-
 export default Login; 
