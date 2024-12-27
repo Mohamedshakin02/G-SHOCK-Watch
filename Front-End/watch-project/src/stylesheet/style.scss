@@ -258,6 +258,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 font-size: 28px;
                 font-weight: 600;
 
@@ -763,6 +764,17 @@ footer{
 }
 
 @media (max-width: 719px) {
+
+    header{
+        nav { 
+            ul{
+                .button{
+                    width: 70%;
+                }
+           }
+        }
+    }
+
     main {
         .intro{
             grid-template-columns: repeat(1, 1fr);
