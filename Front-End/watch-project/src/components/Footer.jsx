@@ -40,7 +40,7 @@ function Footer() {
 
             </footer>
             <div className="copyright">
-                <p>© 2024 CASIO Middle East and Africa FZE</p>
+                <p>© 2025 CASIO Middle East and Africa FZE</p>
             </div>
         </>
     );
