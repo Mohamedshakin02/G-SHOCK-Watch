@@ -244,10 +244,9 @@ main {
             display: grid;
             grid-auto-columns: minmax(100px, 0.5fr);
             grid-auto-rows:  minmax(100px, 0.97fr);
-            // grid-template-columns: repeat(3, minmax(100px, 0.5fr));
             grid-template-areas: 
-            "feature-1 feature-2 feature-3"
-            "feature-4 feature-5 feature-6";
+            "feature-1 feature-2 feature-3 feature-6"
+            "feature-1 feature-4 feature-5 feature-6";
             gap: 50px;
             justify-self: center;
             text-align: center;
