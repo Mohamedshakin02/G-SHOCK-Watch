@@ -1,3 +1,6 @@
+/* This is the default stylesheet file to style the main application component, I didn't imported this stylesheet. 
+I created seperate stylesheet folder to style the website */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
