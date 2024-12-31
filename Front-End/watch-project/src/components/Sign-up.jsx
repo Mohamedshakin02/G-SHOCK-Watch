@@ -5,6 +5,7 @@ function Signup() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
+
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('http://localhost:4000/register', {email, password})
@@ -12,8 +13,12 @@ function Signup() {
         alert("Account successfully created!, Please login !");
         navigate('/login');
     })
-        .catch(err => console.log(err))
-    }
+
+    .catch(err => {console.log(err);
+        alert("Server is not connected")
+   })
+}
+
     return (
         <main>
             <div className="signup-bg">

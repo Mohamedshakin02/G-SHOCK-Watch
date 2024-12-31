@@ -19,7 +19,11 @@ function Login() {
                 alert("Data not found, Please Sign Up!");
             }
     })
-        .catch(err => console.log(err))
+
+        .catch(err => {console.log(err);
+         alert("Server is not connected")
+    })
+        
     }
     return (
         <main>
