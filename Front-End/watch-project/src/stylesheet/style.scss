@@ -1,32 +1,39 @@
+/* Importing Google Fonts: Inter, Permanent Marker */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tiny5&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Tiny5&display=swap');
 
+// Created variables for font families and colors
 $inter-font: "Inter", sans-serif;
 $Permanent-font: "Permanent Marker", serif;
 $red: #cc2229;
 
+/* Sets Body with Light background color, center the content, sets font-family to Inter font */
 body {
     background-color: #F8F8FF;
     margin: auto;
     font-family: $inter-font;
 }
 
+/* Customized background color and text color for selected text */
 ::selection {
     background-color: $red;
     color: #F8F8FF;
 }
 
+/* Headers sets flex layout with space between the logo and navigation */
 header {
     display: flex;
     width: 100%;
     justify-content: space-between;
 
+    // Navigation bar sets flex layout with vertically center
     nav{
         display: flex;
         align-items: center;
 
+        // Hamburger menu icon (for mobile view)
         .menu {
-            display: none;
+            display: none;  // Hidden when the screen is above 1023px width
             position: absolute;
             top: 40px;
             right: 30px;
@@ -36,6 +43,7 @@ header {
             height: 25px;
             cursor: pointer;
 
+            // lines inside the hamburger icon
             span{
                 height: 5px;
                 width: 100%;
@@ -45,34 +53,42 @@ header {
         }
     }
 
+    // Logo image styling
     img {
         height: 100px;
         width: auto;
         margin-left: 30px;
     }
 
+    // Removed bullet point in list
     li {
         list-style: none;
     }
 
+    // Sets unordered list to flex layout in navigation bar with vertically center
     ul {
         display: flex;
         padding: 0%;
         align-items: center;
     }
 
+    // Menu inside navigation bar like links and buttons
+    // Sets space between the elements
+    // Sets font-size to 22px and font-family to 500
+    // Sets margin-right to 30px
     .Menus{
-        width: 50%;
         justify-content: space-between;
         font-size: 22px;
         font-weight: 500;
         margin-right: 30px;
 
+        // Sets gaps between the elements to 50px 
         li{
             box-sizing: border-box;
             padding-right: 50px;
         }
 
+        // removed gaps between the buttons
         .buttons{
             li{
                 padding-right: 0%;
@@ -80,11 +96,13 @@ header {
         }
     }
 
+    // removed underlined of texts in links
     a{
         text-decoration: none;
         color: black;
     }
     
+    // Styling for buttons
     .button{
         font-size: 22px;
         font-weight: 500;
@@ -94,16 +112,19 @@ header {
         border: 0px;
         cursor: pointer;
 
+        // styling for login button
         &-1{
             background-color: black;
             color: white;
         }
 
+        // styling for signup button
         &-2{
             background-color: $red;
             color: white;
         }
 
+        // styling hover effect for the buttons
         &:hover{
             background-color: white;
             color: black;
@@ -111,6 +132,7 @@ header {
             transition: 2s;
         }
 
+        // styling non-hover effect for the buttons
         &:not(:hover){
             transition: 2s;
         }
@@ -118,8 +140,9 @@ header {
 
 }
 
-
+/* Styling for main container*/
 main {
+    // sets gaps between the current elements and above element to 20px
     margin-top: 20px;
 
     .intro{

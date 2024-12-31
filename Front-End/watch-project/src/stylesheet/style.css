@@ -1,21 +1,24 @@
+/* Importing Google Fonts: Inter, Permanent Marker */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tiny5&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Tiny5&display=swap");
+/* Sets Body with Light background color, center the content, sets font-family to Inter font */
 body {
   background-color: #F8F8FF;
   margin: auto;
   font-family: "Inter", sans-serif;
 }
 
+/* Customized background color and text color for selected text */
 ::-moz-selection {
   background-color: #cc2229;
   color: #F8F8FF;
 }
-
 ::selection {
   background-color: #cc2229;
   color: #F8F8FF;
 }
 
+/* Headers sets flex layout with space between the logo and navigation */
 header {
   display: flex;
   width: 100%;
@@ -55,7 +58,6 @@ header ul {
   align-items: center;
 }
 header .Menus {
-  width: 50%;
   justify-content: space-between;
   font-size: 22px;
   font-weight: 500;
@@ -99,6 +101,7 @@ header .button:not(:hover) {
   transition: 2s;
 }
 
+/* Styling for main container*/
 main {
   margin-top: 20px;
 }
