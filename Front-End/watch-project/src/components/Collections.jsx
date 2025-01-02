@@ -55,31 +55,31 @@ function Collections() {
                 {/* Watch sliders */}
                 <SwiperSlide>
                     <div className='watch-collection'>
-                        <img src="/images/watch-1.png" alt="" />
+                        <img src="/images/watch-1.png" alt="GA-B2100CD-1A4" />
                         <p>GA-B2100CD-1A4</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='watch-collection'>
-                        <img src="/images/watch-2.png" alt="" />
+                        <img src="/images/watch-2.png" alt="GA-B2100C-9A" />
                         <p>GA-B2100C-9A</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='watch-collection'>
-                        <img src="/images/watch-3.png" alt="" />
+                        <img src="/images/watch-3.png" alt="GA-B2100-3A" />
                         <p>GA-B2100-3A</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='watch-collection'>
-                        <img src="/images/watch-4.png" alt="" />
+                        <img src="/images/watch-4.png" alt="GA-B2100-2A" />
                         <p>GA-B2100-2A</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='watch-collection'>
-                        <img src="/images/watch-5.png" alt="" />
+                        <img src="/images/watch-5.png" alt="GA-B2100CY-1A" />
                         <p>GA-B2100CY-1A</p>
                     </div>
                 </SwiperSlide>

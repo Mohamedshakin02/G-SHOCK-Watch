@@ -8,7 +8,7 @@ function Footer() {
             <footer>
                 {/* Logo section in the footer */}
                 <div className="footer-logo">
-                    <img src="/images/G-shock logo-2.jpg" alt="" />  {/* Image is imported from public folder */}
+                    <img src="/images/G-shock logo-2.jpg" alt="Logo" />  {/* Image is imported from public folder */}
                 </div>
 
                 {/* Links section in the footer */}
@@ -35,7 +35,7 @@ function Footer() {
                     <form action="">
                         <label htmlFor=""><input type="text" placeholder="Enter your email" />
                             <button onClick={(e)=>e.preventDefault()}> {/* To prevent the reloading the page when the user tries to click the button */}
-                                <img src="/images/email logo.jpg" alt="" /> {/* Image is imported from public folder */}
+                                <img src="/images/email logo.jpg" alt="email" /> {/* Image is imported from public folder */}
                             </button>
                         </label>
                     </form>
@@ -43,9 +43,9 @@ function Footer() {
                     {/* Social media icons section */}
                     <div className="social-media">
                         <ul>
-                            <li><img src="/images/facebook logo.png" alt="" /></li>  {/* Image is imported from public folder */}
-                            <li><img src="/images/instagram logo.png" alt="" /></li> {/* Image is imported from public folder */}
-                            <li><img src="/images/youtube logo.png" alt="" /></li>   {/* Image is imported from public folder */}
+                            <li><img src="/images/facebook logo.png" alt="facebook" /></li>  {/* Image is imported from public folder */}
+                            <li><img src="/images/instagram logo.png" alt="instagram" /></li> {/* Image is imported from public folder */}
+                            <li><img src="/images/youtube logo.png" alt="youtube" /></li>   {/* Image is imported from public folder */}
                         </ul>
                     </div>
                 </div>

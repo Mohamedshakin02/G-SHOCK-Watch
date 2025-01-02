@@ -6,7 +6,7 @@ function Intro() {
             {/* Container for the entire intro section */}
             <div className="intro">
                 <div className="watch_img"> {/* Container for the watch image */}
-                    <img src="/images/G-shock watch.png" alt="" /> {/* Image is imported from public folder */}
+                    <img src="/images/G-shock watch.png" alt="GA-B2100CD-1A7" /> {/* Image is imported from public folder */}
                 </div>
 
                 {/* Container for the watch details */}
