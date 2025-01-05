@@ -28,7 +28,7 @@ function Footer() {
 
                 {/* News and sign-up section */}
                 <div className="News">
-                    <h1>Sign up and save</h1> {/* Heading and texts for the newsletter sign-up section */}
+                    <h1>Sign up and Save</h1> {/* Heading and texts for the newsletter sign-up section */}
                     <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
 
                     {/* Newsletter form for email input */}
