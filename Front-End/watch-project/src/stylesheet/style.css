@@ -520,6 +520,9 @@ footer .social-media img {
   header .Logo {
     justify-content: center;
   }
+  header img {
+    margin-left: auto;
+  }
   header .Menus {
     margin-right: 0px;
   }
