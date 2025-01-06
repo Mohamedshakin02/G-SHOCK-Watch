@@ -33,8 +33,8 @@ function Footer() {
 
                     {/* Newsletter form for email input */}
                     <form action="">
-                        <label htmlFor=""><input type="text" placeholder="Enter your email" />
-                            <button onClick={(e)=>e.preventDefault()}> {/* To prevent the reloading the page when the user tries to click the button */}
+                        <label htmlFor=""><input type="text" placeholder="Enter your email" required/>
+                            <button type="submit" onClick={(e)=>e.preventDefault()}> {/* To prevent the reloading the page when the user tries to click the button */}
                                 <img src="/images/email logo.jpg" alt="email" /> {/* Image is imported from public folder */}
                             </button>
                         </label>
