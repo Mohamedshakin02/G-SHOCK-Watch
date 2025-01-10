@@ -16,7 +16,7 @@ const app = express()
 // Middleware to allow cross-origin requests
 app.use(cors(
     {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
+        origin: ["https://g-shock.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }

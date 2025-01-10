@@ -12,11 +12,13 @@ function Signup() {
     // stored useNavigate function in navigate variable for redirecting page
     const navigate = useNavigate()
 
+    axios.defaults.withCredentials = true;
+
     // handleSubmit function for form submission
     const handleSubmit = (e) => {
         e.preventDefault()  // Prevents reloading the page
         // Sending signup data (email, password) to the backend using axios
-        axios.post('http://localhost:4000/register', {email, password})
+        axios.post('https://g-shock-backend.vercel.app/register', {email, password})
 
         // Handling the response from the backend
         .then(result => {console.log(result);
