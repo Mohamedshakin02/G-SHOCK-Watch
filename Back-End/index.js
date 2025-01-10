@@ -16,7 +16,7 @@ const app = express()
 // Middleware to allow cross-origin requests
 app.use(cors(
     {
-        origin: ["https://g-shock.vercel.app"],
+        origin: ["https://g-shock.vercel.app/login"],
         methods: ["POST", "GET"],
         credentials: true
     }
