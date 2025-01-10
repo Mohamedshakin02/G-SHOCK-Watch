@@ -13,24 +13,15 @@ const userModel = require("./models/userModel")
 // Initializing the Express application
 const app = express()
 
-// Middleware to allow cross-origin requests
-app.use(cors(
-    {
-        origin: ["https://g-shock.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-))
-
 // Middleware to parse incoming JSON requests
 app.use(express.json())
 
+// Middleware to allow cross-origin requests
+app.use(cors())
+
+
 // Connecting to the MongoDB database using Mongoose
 mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-
-app.get("/", (req, res) => {
-    res.json("Hello");
-})
 
 // Route to handle login requests
 app.post("/login", (req, res) =>{
