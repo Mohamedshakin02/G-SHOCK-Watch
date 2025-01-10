@@ -17,11 +17,21 @@ const app = express()
 app.use(express.json())
 
 // Middleware to allow cross-origin requests
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+))
 
 
 // Connecting to the MongoDB database using Mongoose
-mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")
+
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
 
 // Route to handle login requests
 app.post("/login", (req, res) =>{
