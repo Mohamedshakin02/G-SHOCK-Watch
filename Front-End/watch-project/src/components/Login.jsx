@@ -12,7 +12,7 @@ function Login() {
     // stored useNavigate function in navigate variable for redirecting page
     const navigate = useNavigate()
 
-    axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
     // handleSubmit function for form submission
     const handleSubmit = (e) => {
