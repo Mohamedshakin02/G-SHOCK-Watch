@@ -13,9 +13,6 @@ const userModel = require("./models/userModel")
 // Initializing the Express application
 const app = express()
 
-// Middleware to parse incoming JSON requests
-app.use(express.json())
-
 // Middleware to allow cross-origin requests
 app.use(cors(
     {
@@ -25,6 +22,8 @@ app.use(cors(
     }
 ))
 
+// Middleware to parse incoming JSON requests
+app.use(express.json())
 
 // Connecting to the MongoDB database using Mongoose
 mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")
