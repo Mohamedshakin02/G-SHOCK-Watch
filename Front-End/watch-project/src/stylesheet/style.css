@@ -677,7 +677,7 @@ footer .social-media img {
     height: 70%;
     width: 70%;
   }
-  footer .login-bg .login-bg-2 .login-box, footer .signup-bg .login-bg-2 .login-box, .signup-bg footer .login-bg .signup-bg-2 .login-box, footer .signup-bg .signup-bg-2 .login-box, .signup-bg .signup-bg-2 footer .login-bg .login-bg-2 .signup-box, .signup-bg footer .login-bg .signup-bg-2 .signup-box, footer .signup-bg .signup-bg-2 .signup-box {
+  main .login-bg .login-bg-2 .login-box, main .signup-bg .login-bg-2 .login-box, .signup-bg main .login-bg .signup-bg-2 .login-box, main .signup-bg .signup-bg-2 .login-box, .signup-bg .signup-bg-2 main .login-bg .login-bg-2 .signup-box, .signup-bg main .login-bg .signup-bg-2 .signup-box, main .signup-bg .signup-bg-2 .signup-box {
     width: 80%;
   }
 }
