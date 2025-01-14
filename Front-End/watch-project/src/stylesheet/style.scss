@@ -1010,6 +1010,18 @@ footer{
             }
         }
     }
+
+    footer {
+        .login-bg{
+            .login-bg-2{
+                
+                // Changed the width of login box and it reflects to signup box as well
+                .login-box{
+                    width: 80%;
+                }
+            }
+        }
+    }
 }
 
 /* Media queries for screen width of 564px px or lesser */

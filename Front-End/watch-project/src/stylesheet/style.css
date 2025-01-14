@@ -677,6 +677,9 @@ footer .social-media img {
     height: 70%;
     width: 70%;
   }
+  footer .login-bg .login-bg-2 .login-box, footer .signup-bg .login-bg-2 .login-box, .signup-bg footer .login-bg .signup-bg-2 .login-box, footer .signup-bg .signup-bg-2 .login-box, .signup-bg .signup-bg-2 footer .login-bg .login-bg-2 .signup-box, .signup-bg footer .login-bg .signup-bg-2 .signup-box, footer .signup-bg .signup-bg-2 .signup-box {
+    width: 80%;
+  }
 }
 /* Media queries for screen width of 564px px or lesser */
 @media (max-width: 564px) {
