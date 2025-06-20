@@ -86,7 +86,7 @@ const app = express()
 // Middleware to allow cross-origin requests
 app.use(cors(
     {
-        origin: "*",
+        origin: ["*"],
         credentials: true
     }
 ))
