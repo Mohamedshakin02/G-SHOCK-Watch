@@ -11,7 +11,7 @@ async function connectDB() {
 
   if (!cached.promise) {
     cached.promise = mongoose
-      .connect("mongodb+srv://root:12345@cluster0.io7zw63.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+      .connect("mongodb+srv://root:12345@cluster0.io7zw63.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
