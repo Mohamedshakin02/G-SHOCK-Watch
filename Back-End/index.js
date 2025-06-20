@@ -96,7 +96,7 @@ app.use(cors(
 app.use(express.json())
 
 // Connecting to the MongoDB database using Mongoose
-mongoose.connect("mongodb+srv://mshakin2005:12345@cluster0.ahvz1.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://root:12345@cluster0.io7zw63.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 app.get("/", (req, res) => {
     res.json("Hello");
