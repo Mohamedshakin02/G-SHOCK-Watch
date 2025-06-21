@@ -1,13 +1,35 @@
 /* Importing Google Fonts: Inter, Permanent Marker */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tiny5&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Tiny5&display=swap");
 /* Sets Body with Light background color, center the content, sets font-family to Inter font */
 body {
-  background-color: #F8F8FF;
-  margin: auto;
-  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Rajdhani", sans-serif;
+  color: black;
+  background: linear-gradient(-45deg, #fe6085, #f0755f, #2d426b, #3a5b95);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
+* {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* Customized background color and text color for selected text */
 ::-moz-selection {
   background-color: #cc2229;
@@ -59,7 +81,7 @@ header ul {
 }
 header .Menus {
   justify-content: space-between;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
   margin-right: 30px;
 }
@@ -75,7 +97,7 @@ header a {
   color: black;
 }
 header .button {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
   box-sizing: border-box;
   padding: 10px 0px 10px 0px;
@@ -101,7 +123,7 @@ header .button:not(:hover) {
   transition: 2s;
 }
 
-/* Styling for main container*/
+/* Styling for main container */
 main {
   margin-top: 20px;
 }
@@ -114,9 +136,36 @@ main .intro {
   grid-template-areas: "image detail";
   margin-bottom: 100px;
 }
-main .intro img {
+main .intro .watch-img {
+  grid-area: image;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+main .intro .watch-img img {
   width: 100%;
   height: auto;
+  display: block;
+}
+main .intro .watch-img .light-sweep {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  animation: sweep 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes sweep {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 main .intro p {
   padding: 0%;
@@ -127,16 +176,16 @@ main .intro .watch-detail {
   padding-right: 30px;
 }
 main .intro .watch-detail .collab {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
-  color: #393E46;
+  color: #cc2229;
 }
 main .intro .watch-detail .watch-title {
   font-size: 52px;
   font-weight: 600;
 }
 main .intro .watch-detail .watch-desc {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
 }
 main .intro button {
@@ -149,6 +198,7 @@ main .intro button {
   background-color: black;
   color: white;
   font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
 }
 main .intro button:hover {
@@ -164,39 +214,48 @@ main .intro .Cart {
   margin-left: auto;
   background-color: #cc2229;
 }
-main .watch-img {
-  grid-area: image;
-}
 main .watch-detail {
   grid-area: detail;
   align-self: center;
 }
 main .about {
+  position: relative;
   display: flex;
   height: auto;
+  overflow: hidden;
+}
+main .about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url("/images/G-shock logo.png");
   background-size: 200px;
   background-repeat: repeat;
   background-position-x: center;
+  filter: blur(8px);
+  z-index: 0;
+  opacity: 0.3;
+}
+main .about > * {
+  position: relative;
+  z-index: 1;
 }
 main .about p {
   display: flex;
   align-items: center;
   margin: 0px;
   box-sizing: border-box;
-  padding: 0px 100px 0px 100px;
+  padding: 0px 100px;
   font-family: "Permanent Marker", serif;
   font-size: 2.4vw;
   font-weight: 600;
   text-align: center;
   justify-self: center;
   width: 100%;
-  background-color: rgba(248, 248, 255, 0.9);
 }
 main .about img {
   -o-object-fit: contain;
      object-fit: contain;
-  background-color: rgba(248, 248, 255, 0.9);
   max-height: 400px;
   width: auto;
 }
@@ -205,14 +264,14 @@ main .feature-section {
   padding: 50px;
 }
 main .feature-section .feature-heading {
-  font-size: 22px;
+  font-size: 34px;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 50px;
 }
 main .feature-section .features-container {
   display: grid;
   grid-auto-columns: minmax(100px, 0.5fr);
-  grid-auto-rows: minmax(100px, 0.97fr);
   grid-template-areas: "feature-1 feature-2 feature-3 feature-6" "feature-1 feature-4 feature-5 feature-6";
   gap: 50px;
   justify-self: center;
@@ -243,21 +302,34 @@ main .feature-section .features-container .feature-1 {
 }
 main .feature-section .features-container .feature-2 {
   grid-area: feature-2;
+  aspect-ratio: 1/1;
+  height: auto;
+  min-height: 0;
 }
 main .feature-section .features-container .feature-3 {
   grid-area: feature-3;
+  aspect-ratio: 1/1;
+  height: auto;
+  min-height: 0;
 }
 main .feature-section .features-container .feature-4 {
   grid-area: feature-4;
+  aspect-ratio: 1/1;
+  height: auto;
+  min-height: 0;
 }
 main .feature-section .features-container .feature-5 {
   grid-area: feature-5;
+  aspect-ratio: 1/1;
+  height: auto;
+  min-height: 0;
 }
 main .feature-section .features-container .feature-6 {
   grid-area: feature-6;
 }
 main .collection-heading {
-  font-size: 22px;
+  font-size: 34px;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -284,13 +356,15 @@ main .swiper {
   margin-left: auto;
   margin-right: auto;
 }
-main .swiper-button-prev, main .swiper-button-next {
+main .swiper-button-prev,
+main .swiper-button-next {
   color: #cc2229;
 }
 main .swiper-pagination-bullet-active {
   background-color: #cc2229;
 }
-main .swiper-button-prev:after, main .swiper-button-next:after {
+main .swiper-button-prev:after,
+main .swiper-button-next:after {
   padding-bottom: 100px;
 }
 
@@ -311,7 +385,10 @@ footer img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-footer h1, footer p, footer ul, footer li {
+footer h1,
+footer p,
+footer ul,
+footer li {
   padding: 0px;
   margin: 0px;
   list-style: none;
@@ -421,15 +498,29 @@ footer .social-media img {
 
 /*Styling for login page*/
 .login-bg, .signup-bg {
+  position: relative;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
+}
+.login-bg::before, .signup-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("/images/G-shock logo.png");
   background-size: 200px;
   background-repeat: repeat;
   background-position-x: center;
+  filter: blur(8px);
+  opacity: 0.3;
+  z-index: 0;
 }
 .login-bg .login-bg-2, .signup-bg .login-bg-2, .signup-bg .signup-bg-2 {
-  background-color: rgba(248, 248, 255, 0.9);
+  position: relative;
+  z-index: 1;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -445,7 +536,9 @@ footer .social-media img {
   align-items: center;
   box-sizing: border-box;
   padding: 30px;
-  background-color: #F8F8FF;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   margin-top: 100px;
   justify-content: space-between;
 }
@@ -459,7 +552,7 @@ footer .social-media img {
 }
 .login-bg .login-bg-2 .login-box input, .signup-bg .login-bg-2 .login-box input, .signup-bg .signup-bg-2 .login-box input, .signup-bg .signup-bg-2 .signup-box input {
   width: 100%;
-  background-color: #F8F8FF;
+  background-color: transparent;
   border: 0px;
   font-size: 16px;
   border-bottom: 3px black solid;
@@ -481,7 +574,7 @@ footer .social-media img {
   border: 0px;
   box-sizing: border-box;
   padding: 10px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
 }
 .login-bg .login-bg-2 h1, .signup-bg .login-bg-2 h1, .signup-bg .signup-bg-2 h1 {
@@ -570,13 +663,13 @@ footer .social-media img {
     color: white;
   }
   main .intro .watch-detail .collab {
-    font-size: 18px;
+    font-size: 22px;
   }
   main .intro .watch-detail .watch-title {
     font-size: 38px;
   }
   main .intro .watch-detail .watch-desc {
-    font-size: 16px;
+    font-size: 20px;
   }
   main .about {
     background-size: 150px;
@@ -595,7 +688,12 @@ footer .social-media img {
   main .feature-section .features-container {
     grid-template-areas: "feature-1 feature-2" "feature-3 feature-4" "feature-5 feature-6";
   }
-  main .feature-section .features-container .feature img {
+  main .feature-section .features-container .feature {
+    aspect-ratio: 1/1;
+    height: auto;
+    min-height: 0;
+  }
+  main .feature-section .features-container .feature .feature img {
     height: 80%;
     width: 80%;
   }
@@ -611,7 +709,8 @@ footer .social-media img {
     margin-top: 50px;
     text-align: center;
   }
-  footer .News label, footer .News p {
+  footer .News label,
+  footer .News p {
     justify-self: center;
     width: 70%;
   }
@@ -642,17 +741,17 @@ footer .social-media img {
     margin-top: 10px;
   }
   main .intro .watch-detail .collab {
-    font-size: 16px;
+    font-size: 20px;
   }
   main .intro .watch-detail .watch-title {
-    font-size: 32px;
+    font-size: 34px;
   }
   main .intro .watch-detail .watch-desc {
-    font-size: 16px;
+    font-size: 20px;
   }
   main .intro button {
     padding: 10px 20px 10px 20px;
-    font-size: 22px;
+    font-size: 26px;
     width: 90%;
     margin: 15px;
     margin-bottom: 0%;
