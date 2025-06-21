@@ -90,7 +90,10 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault()  // Prevents reloading the page
         // Sending login data (email, password) to the backend using axios
-        axios.post('https://g-shock-backend.onrender.com/login', {email, password})
+        axios.post('https://g-shock-backend.onrender.com/login', 
+            { email, password }, 
+            { withCredentials: true } // ✅ explicitly tell Axios to send cookies
+        )
 
         // Handling the response from the backend
         .then(result => {

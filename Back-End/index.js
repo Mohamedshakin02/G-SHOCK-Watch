@@ -7,7 +7,10 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://g-shock.vercel.app', // ✅ only allow your frontend
+  credentials: true                     // ✅ allow cookies/auth headers
+}));
 app.use(express.json());
 
 // MongoDB Connection
