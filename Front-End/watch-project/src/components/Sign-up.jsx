@@ -85,8 +85,7 @@ function Signup() {
         e.preventDefault()  // Prevents reloading the page
         // Sending signup data (email, password) to the backend using axios
         axios.post('https://g-shock-backend.onrender.com/register', 
-            { email, password }, 
-            { withCredentials: true } // ✅ explicitly tell Axios to send cookies
+            { email, password } // ✅ explicitly tell Axios to send cookies
         )
 
         // Handling the response from the backend
