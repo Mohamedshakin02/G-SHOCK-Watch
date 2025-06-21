@@ -10,14 +10,10 @@ async function connectDB() {
   if (cached.conn) return cached.conn;
 
   if (!cached.promise) {
-    cached.promise = mongoose
-      .connect("mongodb+srv://root:12345@cluster0.io7zw63.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
-      .then((mongoose) => {
-        return mongoose;
-      });
+    cached.promise = mongoose.connect("mongodb+srv://root:12345@cluster0.io7zw63.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }).then(mongoose => mongoose);
   }
 
   cached.conn = await cached.promise;

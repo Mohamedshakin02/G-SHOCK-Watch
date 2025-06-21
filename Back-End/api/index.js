@@ -10,8 +10,10 @@ app.use(cors({ origin: "*", methods: ["GET", "POST"], credentials: true }));
 app.use(express.json());
 
 app.get("/", async (req, res) => {
+  console.log("📥 GET / hit");
   await connectDB();
-  res.json("Hello from Vercel Serverless!");
+  console.log("✅ Mongo connected");
+  res.json("Hello from backend");
 });
 
 app.post("/login", async (req, res) => {
