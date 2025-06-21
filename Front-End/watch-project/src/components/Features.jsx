@@ -39,7 +39,7 @@ function Features() {
 
                     <div className="feature feature-6">
                         <img src="/images/bluetooth.png" alt="Bluetooth" />  {/* Image is imported from public folder */}
-                        <p>Easy to operate via smartphone</p>
+                        <p>Easy to operate</p>
                     </div>
 
                 </div>
