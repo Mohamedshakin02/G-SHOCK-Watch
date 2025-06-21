@@ -84,7 +84,7 @@ function Signup() {
     const handleSubmit = (e) => {
         e.preventDefault()  // Prevents reloading the page
         // Sending signup data (email, password) to the backend using axios
-        axios.post('https://g-shock-backend.onrender.com//register', {email, password})
+        axios.post('https://g-shock-backend.onrender.com/register', {email, password})
 
         // Handling the response from the backend
         .then(result => {console.log(result);
