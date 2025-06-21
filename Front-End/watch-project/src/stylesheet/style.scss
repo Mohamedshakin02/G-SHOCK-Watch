@@ -102,19 +102,20 @@ header {
     .Menus {
         justify-content: space-between;
         font-size: 26px;
-        font-weight: 500;
         margin-right: 30px;
 
         // Sets gaps between the elements to 50px 
         li {
             box-sizing: border-box;
             padding-right: 50px;
+            font-weight: 500;
         }
 
         // removed gaps between the buttons
         .buttons {
             li {
                 padding-right: 0%;
+                font-weight: 500;
             }
         }
     }
@@ -128,7 +129,6 @@ header {
     // Styling for buttons
     .button {
         font-size: 26px;
-        font-weight: 500;
         box-sizing: border-box;
         padding: 10px 0px 10px 0px;
         width: 100px;
