@@ -233,7 +233,7 @@ main {
             // Changed font-size and font-weight and color in collaboration text
             .collab {
                 font-size: 26px;
-                font-weight: 500;
+                font-weight: 600;
                 color: $red;
 
 
@@ -242,7 +242,7 @@ main {
             // Changed font-size and font-weight in title text
             .watch-title {
                 font-size: 52px;
-                font-weight: 600;
+                font-weight: 900;
             }
 
             // Changed font-size and font-weight in description text
@@ -1074,7 +1074,7 @@ footer {
 
                 // Changed the font-size of watch-description
                 .collab {
-                    font-size: 20px;
+                    font-size: 22px;
                 }
 
                 .watch-title {
@@ -1110,12 +1110,14 @@ footer {
             }
 
             p {
+                padding: 0px 20px 0px 20px;
                 font-size: 24px;
             }
         }
 
         //Changed grid layout in feature container for mobile
         .feature-section {
+            padding: 20px;
             .features-container {
                 grid-auto-columns: minmax(100px, 0.9fr);
                 display: grid;

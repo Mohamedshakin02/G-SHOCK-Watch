@@ -177,12 +177,12 @@ main .intro .watch-detail {
 }
 main .intro .watch-detail .collab {
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   color: #cc2229;
 }
 main .intro .watch-detail .watch-title {
   font-size: 52px;
-  font-weight: 600;
+  font-weight: 900;
 }
 main .intro .watch-detail .watch-desc {
   font-size: 26px;
@@ -741,7 +741,7 @@ footer .social-media img {
     margin-top: 10px;
   }
   main .intro .watch-detail .collab {
-    font-size: 20px;
+    font-size: 22px;
   }
   main .intro .watch-detail .watch-title {
     font-size: 34px;
@@ -764,7 +764,11 @@ footer .social-media img {
     display: none;
   }
   main .about p {
+    padding: 0px 20px 0px 20px;
     font-size: 24px;
+  }
+  main .feature-section {
+    padding: 20px;
   }
   main .feature-section .features-container {
     grid-auto-columns: minmax(100px, 0.9fr);
