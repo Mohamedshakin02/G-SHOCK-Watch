@@ -146,6 +146,8 @@ main .intro .watch-img img {
   width: 100%;
   height: auto;
   display: block;
+  width: 80%;
+  justify-self: center;
 }
 main .intro .watch-img .light-sweep {
   position: absolute;
