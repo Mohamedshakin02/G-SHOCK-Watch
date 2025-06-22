@@ -180,16 +180,17 @@ main {
 
         .watch-img {
             grid-area: image;
-            position: relative; // Enables absolute positioning inside
-            overflow: hidden; // Hides the sweeping light outside bounds
+            position: relative; 
+            overflow: hidden; 
             border-radius: 50%;
+            width: 80%;
+            justify-self: center;
+            aspect-ratio: 1 / 1; 
 
             img {
                 width: 100%;
                 height: auto;
                 display: block;
-                width: 80%;
-                justify-self: center;
             }
 
             .light-sweep {
