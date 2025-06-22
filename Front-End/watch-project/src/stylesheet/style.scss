@@ -236,7 +236,7 @@ main {
             // Changed font-size and font-weight and color in collaboration text
             .collab {
                 font-size: 26px;
-                font-weight: 600;
+                font-weight: 700;
                 color: $red;
 
 
@@ -251,7 +251,7 @@ main {
             // Changed font-size and font-weight in description text
             .watch-desc {
                 font-size: 26px;
-                font-weight: 500;
+                font-weight: 600;
             }
         }
 
@@ -401,8 +401,8 @@ main {
 
             // sets the width and height of the image in grid-item
             .feature img {
-                height: 90%;
-                width: 90%;
+                width: 80%;
+                aspect-ratio: 1 / 1; 
                 object-fit: contain;
             }
 

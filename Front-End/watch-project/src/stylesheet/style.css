@@ -180,7 +180,7 @@ main .intro .watch-detail {
 }
 main .intro .watch-detail .collab {
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 700;
   color: #cc2229;
 }
 main .intro .watch-detail .watch-title {
@@ -189,7 +189,7 @@ main .intro .watch-detail .watch-title {
 }
 main .intro .watch-detail .watch-desc {
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
 }
 main .intro button {
   margin-left: 15px;
@@ -295,8 +295,8 @@ main .feature-section .features-container p {
   margin: 0%;
 }
 main .feature-section .features-container .feature img {
-  height: 90%;
-  width: 90%;
+  width: 80%;
+  aspect-ratio: 1/1;
   -o-object-fit: contain;
      object-fit: contain;
 }
