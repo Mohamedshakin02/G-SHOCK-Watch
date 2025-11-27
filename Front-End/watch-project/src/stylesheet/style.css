@@ -717,8 +717,9 @@ footer .social-media ul li i {
   }
   footer .News label,
   footer .News p {
-    justify-self: center !important;
-    width: 70% !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
   footer .News .social-media ul {
     justify-content: center;
