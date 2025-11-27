@@ -33,8 +33,8 @@ function Footer() {
 
                     {/* Newsletter form for email input */}
                     <form action="">
-                        <label htmlFor=""><input type="text" placeholder="Enter your email" required/>
-                            <button type="submit" onClick={(e)=>e.preventDefault()}> {/* To prevent the reloading the page when the user tries to click the button */}
+                        <label htmlFor=""><input type="text" placeholder="Enter your email" required />
+                            <button type="submit" onClick={(e) => e.preventDefault()}> {/* To prevent the reloading the page when the user tries to click the button */}
                                 <img src="/images/email logo.jpg" alt="email" /> {/* Image is imported from public folder */}
                             </button>
                         </label>
@@ -43,9 +43,9 @@ function Footer() {
                     {/* Social media icons section */}
                     <div className="social-media">
                         <ul>
-                            <li><img src="/images/facebook logo.png" alt="facebook" /></li>  {/* Image is imported from public folder */}
-                            <li><img src="/images/instagram logo.png" alt="instagram" /></li> {/* Image is imported from public folder */}
-                            <li><img src="/images/youtube logo.png" alt="youtube" /></li>   {/* Image is imported from public folder */}
+                            <li><i className="bi bi-facebook"></i></li>
+                            <li><i className="bi bi-instagram"></i></li>
+                            <li><i className="bi bi-youtube"></i></li>
                         </ul>
                     </div>
                 </div>
